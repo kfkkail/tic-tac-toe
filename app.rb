@@ -27,9 +27,12 @@ class GamePlay
     
     isgameover = @gameboard.win_test
     
-    if isgameover == :tie || isgameover == :win
+    if isgameover == :win
       @gameboard.draw
       puts "We have a winner! #{@player.game_piece} wins!"
+      start_new_game
+    elsif isgameover == :tie
+      puts "Both players suck! Game is tied."
       start_new_game
     else
       @player.swap_piece

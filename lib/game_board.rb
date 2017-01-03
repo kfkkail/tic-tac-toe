@@ -35,6 +35,7 @@ class GameBoard
           [@pieces[0], @pieces[4], @pieces[8]].uniq.length == 1 ||
           [@pieces[0], @pieces[3], @pieces[6]].uniq.length == 1 ||
           [@pieces[1], @pieces[4], @pieces[7]].uniq.length == 1 ||
+          [@pieces[2], @pieces[4], @pieces[6]].uniq.length == 1 ||
           [@pieces[2], @pieces[5], @pieces[8]].uniq.length == 1
       return :win
     else
