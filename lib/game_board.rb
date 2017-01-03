@@ -16,7 +16,13 @@ class GameBoard
   end
   
   def store_position(position, piece_type)
-    @pieces[position-1] = piece_type
+    currentpiece = @pieces[position-1]
+    if currentpiece == "X" || currentpiece =="Y" || [*1..9].include?(position) == false
+      return :nope
+    else
+      @pieces[position-1] = piece_type
+      return :yep
+    end
   end
   
   def win_test
