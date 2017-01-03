@@ -1,6 +1,4 @@
 require 'player'
-require 'rspec'
-require 'byebug'
 
 # spec/player_spec.rb
 describe Player do
